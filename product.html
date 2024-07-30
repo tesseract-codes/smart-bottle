@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Smart Water Bottle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <style>
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+
+	padding: 20px 40px;
+	width: 100vw;
+	-webkit-backdrop-filter: blur(1px);
+	backdrop-filter: blur(8px);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.product-details {
+    padding: 50px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.product-details .product-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-details .product-images img:hover {
+    transform: scale(1.05);
+}
+
+.product-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transform: translateY(-20px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.product-details p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #555;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.product-details .btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.reviews {
+    padding: 50px 0;
+    background: #f9f9f9;
+}
+
+.reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.reviews .row div {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.reviews .row div:hover {
+    transform: scale(1.05);
+}
+
+.reviews p {
+    font-size: 1rem;
+    color: #333;
+}
+
+footer {
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+footer a {
+    color: #00b4d8;
+    margin: 0 10px;
+}
+@media only screen and (max-width: 768px) {
+	/* footer{
+		position: absolute !important;
+		top: 100% !important;
+		bottom: 0px !important;
+		margin: 0%;
+		 display: none;
+	} */
+	.reviews{
+		display: none;
+	}
+
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">Smart Water Bottle</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="product-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 product-images">
+                    <img style="width:400px" src="product-image.jpg" alt="Smart Water Bottle">
+                </div>
+                <div class="col-md-6">
+                    <h1>Smart Water Bottle V2</h1>
+                    <p>$49.99</p>
+                    <p>Stay hydrated with our state-of-the-art smart water bottle. Tracks your water intake and reminds you to drink water throughout the day.</p>
+                    <a href="./checkout.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews text-center bg-light">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>"Excellent product! Keeps me on track with my hydration goals."</p>
+                    <p>- Casey</p>
+                </div>
+                <div class="col-md-4">
+                    <p>"Love the design and the functionality."</p>
+                    <p>- Morgan</p>
+                </div>
+                <div class="col-md-4">
+                    <p>"Great investment for health-conscious individuals."</p>
+                    <p>- Riley</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center bg-dark text-white py-4">
+        <div class="container">
+            <p>&copy; 2024 Smart Water Bottle</p>
+            <a href="./index.html">Privacy Policy</a> | <a href="./index.html">Return Policy</a>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+</body>
+</html>

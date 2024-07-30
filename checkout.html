@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart and Checkout - Smart Water Bottle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <style>
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+
+padding: 20px 40px;
+width: 100vw;
+-webkit-backdrop-filter: blur(1px);
+backdrop-filter: blur(8px);
+}
+.navbar{
+	z-index: 99;
+
+		padding: 20px 40px;
+	width: 100vw;
+	-webkit-backdrop-filter: blur(1px);
+	backdrop-filter: blur(8px);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.cart-summary {
+    padding: 50px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.cart-summary h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.cart-summary .cart-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-summary .cart-item:hover {
+    transform: scale(1.05);
+}
+
+.cart-summary .cart-item img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-summary .cart-item img:hover {
+    transform: scale(1.05);
+}
+
+.cart-summary h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    transform: translateY(-20px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.cart-summary p {
+    font-size: 1.25rem;
+    color: #555;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.cart-summary .btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.checkout-form {
+    padding: 50px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.checkout-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.checkout-form .form-group label {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.checkout-form .form-group input, .checkout-form .form-group select {
+    font-size: 1.25rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.checkout-form .form-group input:focus, .checkout-form .form-group select:focus {
+    transform: scale(1.05);
+}
+
+.checkout-form .btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+footer a {
+    color: #00b4d8;
+    margin: 0 10px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">Smart Water Bottle</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="cart-summary">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="cart-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="product-image.jpg" alt="Smart Water Bottle" class="img-fluid">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Smart Water Bottle V2</h3>
+                                <p>Quantity: 1</p>
+                                <p>Price: $49.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3>Order Summary</h3>
+                    <p>Subtotal: $49.99</p>
+                    <p>Shipping: $5.00</p>
+                    <p>Total: $54.99</p>
+                    <a href="#checkout" class="btn btn-primary">Proceed to Checkout</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="checkout" class="checkout-form">
+        <div class="container">
+            <h2>Checkout</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <input type="text" id="address" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Payment Method</label>
+                    <select id="payment" class="form-control" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </form>
+        </div>
+    </section>
+    <footer class="text-center bg-dark text-white py-4">
+        <div class="container">
+            <p>&copy; 2024 Smart Water Bottle</p>
+            <a href="./index.html">Privacy Policy</a> | <a href="./index.html">Return Policy</a>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+</body>
+</html>

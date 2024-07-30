@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Water Bottle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <style>
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+	background-color: #0000005e !important;
+	z-index: 99;
+	position: fixed;
+	padding: 20px 40px;
+	width: 100vw;
+	-webkit-backdrop-filter: blur(1px);
+	backdrop-filter: blur(8px);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+header.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+header.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(-20px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+header.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(20px);
+    animation: slideIn 1s ease-in-out 0.5s forwards;
+}
+
+header.hero a.btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.features {
+    padding: 50px 0;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.features .row div {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.features .row div:hover {
+    transform: scale(1.05);
+}
+
+.features .bi {
+    font-size: 3rem;
+    color: #00b4d8;
+}
+.features img{
+	width: 200px;
+	min-width: 100px;
+	max-width: 300px;
+}
+.features h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.features p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.testimonials {
+    padding: 50px 0;
+    background: #f9f9f9;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.testimonials .row div {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonials .row div:hover {
+    transform: scale(1.05);
+}
+
+.testimonials p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.trust-badges img {
+    width: 100px;
+    margin: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+footer a {
+    color: #00b4d8;
+    margin: 0 10px;
+}
+section > .quality{
+	margin-top: 2%;
+	margin-bottom: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: end;
+}
+
+section > .quality h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+.quality img{
+	width: 200px;
+}
+@media only screen and (max-width: 768px) {
+	section > .quality{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Smart Water Bottle</a>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav ml-auto">
+			<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+			<li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+		    </ul>
+		</div>
+	    </nav>
+    <header class="hero">
+        <div>
+            <h1>Stay Hydrated with Our Smart Water Bottle</h1>
+            <p>Tracks your water intake and keeps you healthy</p>
+            <a href="./product.html" class="btn btn-primary">Shop Now</a>
+        </div>
+    </header>
+    <section id="features" class="features text-center">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="bi bi-droplet"></i>
+		    <img src="./track.avif" alt="tracking image"></img>
+                    <h3>Hydration Tracking</h3>
+                    <p>Monitors your daily water intake.</p>
+                </div>
+                <div class="col-md-4">
+			<i class="bi bi-battery-charging"></i>
+			<img src="./bat.jpg" alt="battery image"></img>
+			<h3>Long Battery Life</h3>
+			<p>Lasts up to a week on a single charge.</p>
+                </div>
+                <div class="col-md-4">
+			<i class="bi bi-phone"></i>
+			<img src="./mob.avif" alt="mobile app image"></img>
+			<h3>Mobile App</h3>
+                    <p>Syncs with our user-friendly mobile app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials text-center bg-light">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <em>"This water bottle has changed my life!"</em><br>
+                    <em><strong>- Alex</strong></em>
+                </div>
+                <div class="col-md-4">
+                    <em>"I love the hydration reminders!"</em><br>
+                    <em><strong>- Jamie</strong></em>
+                </div>
+                <div class="col-md-4">
+                    <em>"Highly recommend for anyone who forgets to drink water."</em><br>
+                    <em><strong>- Taylor</strong></em>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="trust-badges text-center">
+	<h2>What we provide</h2>
+        <div class="container quality">
+           <div class="qual"> <img src="secure-payment.jpg" alt="Secure Payment">
+	    <h4>Secure Payment</h4></div>
+          <div class="qual">  <img src="money-back.webp" alt="Money-Back Guarantee">
+	    <h4>Money Back Guarantee</h4></div>
+           <div class="qual"> <img src="fast-shipping.jpg" alt="Fast Shipping">
+	    <h4>Fast Shipping</h4></div>
+        </div>
+    </section>
+    <footer class="text-center bg-dark text-white py-4">
+        <div class="container">
+            <p>&copy; 2024 Smart Water Bottle</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Return Policy</a>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+</body>
+</html>
